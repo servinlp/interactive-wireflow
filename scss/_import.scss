@@ -1,0 +1,175 @@
+.btn{
+  display: inline-block;
+  min-width: 190px;
+  height: 45px;
+  background-color: $buttonblue;
+  padding: .625rem 1.125rem;
+  border: none;
+  box-sizing: border-box;
+  position: relative;
+  color: #fff;
+  font-size: 1rem;
+  font-family: $clearsans, Tahoma, sans-serif;
+  line-height: calc(35px - .625rem);
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: inset 0 -.125rem 0 $blue;
+  @include transition(box-shadow 0.15s ease);
+  span, div{
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    margin-bottom: 3px;
+    display: inline-block;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    @include transition(transform 0.15s ease);
+    @include transform(rotate(-45deg));
+    @include transform-origin(8px 8px);
+  }
+  &:hover{
+    box-shadow: inset 0 -3.125rem 0 #005ca0;
+  }
+  &.open{
+    span, div{
+      @include transform(rotate(45deg));
+    }
+  }
+}
+
+.yellowbtn{
+  background-color: $yellowdarker;
+  box-shadow: 0 -.125rem 0 $yellowhover inset;
+  &:hover{
+    background-color: $yellowhover;
+    box-shadow: none;
+  }
+}
+
+.arrowLink{
+  color: $linkblue;
+  font-family: $clearsans, Tahoma, sans-serif;
+  text-decoration: none;
+  position: relative;
+  padding-left: 1.875em;
+  top: 1px;
+  display: inline-block;
+  @include transition(all 0.15s ease);
+  &::before{
+    content: "";
+    display: block;
+    position:absolute;
+    left: 0;
+    top: .2em;
+    width: 10px;
+    height: 10px;
+    border-right: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+    @include transform(rotate(-45deg) translateX(0rem));
+    @include transition(all 0.15s ease-in-out);
+  }
+  &:hover{
+    color: $mainblue;
+    &::before{
+      @include transform(rotate(-45deg) translate(0.4rem, 0.4rem));
+    }
+  }
+}
+
+.container{
+  @media (min-width: 40em){
+    max-width: 70%;
+    padding: 1.125rem 15%;
+    box-sizing: content-box;
+  }
+  @media (min-width: 60em){
+    max-width: 60%;
+    padding: 1.125rem 20%;
+    box-sizing: content-box;
+  }
+  @media (min-width: 75em){
+    max-width: 50%;
+    padding: 1.125rem 25%;
+  }
+}
+
+fieldset{
+  position: relative;
+  > span {
+      margin: -.4em 0 -.4em 0;
+  }
+}
+
+form{
+  color: $mainblue;
+  // position: absolute
+  legend{
+    font-size: 1.5em;
+    line-height: 1.9em;
+    margin-bottom: 1em;
+  }
+  legend{
+    font-size: 1.5em;
+    line-height: 1.9em;
+    margin-bottom: 1em;
+  }
+  label{
+    display: block;
+    width: 100%;
+    margin-top: 1em;
+    input{
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      color: $mainblue;
+      border-color: currentColor;
+      border-style: inset;
+      font-size: 1em;
+      margin-top: 5px;
+      padding: 0.6875em 0.9375em 0.5625em 0.9375em;
+    }
+  }
+  input[type="submit"], a, button, .arrowLink{
+    margin-top: 1em;
+    display: block;
+  }
+  button{
+    background: none;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  span{
+    display: block;
+    color: $alert;
+    font-size: 1em;
+    opacity: 0;
+    margin: .4em 0 0em 0;
+  }
+}
+.register{
+  span{
+    margin: .4em 0 0em 0;
+  }
+}
+
+input.btn{
+  + div{
+    width: 10px;
+    height: 10px;
+    position: relative;
+    top: -33px;
+    left: 45px;
+    display: inline-block;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    @include transition(transform 0.15s ease);
+    @include transform(rotate(-45deg));
+    @include transform-origin(8px 8px);
+  }
+  &.open{
+    + div{
+      @include transform(rotate(45deg));
+    }
+  }
+}

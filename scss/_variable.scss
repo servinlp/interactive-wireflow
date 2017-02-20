@@ -1,0 +1,32 @@
+// Fonts with free license from:
+// http://www.1001fonts.com/clear-sans-font.html
+
+@font-face {
+  font-family: 'ClearSans-Light';
+  src: url('fonts/ClearSans-Light.eot?#iefix') format('embedded-opentype'),  url('fonts/ClearSans-Light.woff') format('woff'), url('fonts/ClearSans-Light.ttf')  format('truetype'), url('fonts/ClearSans-Light.svg#ClearSans-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ClearSans';
+  src: url('fonts/ClearSans.eot?#iefix') format('embedded-opentype'),  url('fonts/ClearSans.woff') format('woff'), url('fonts/ClearSans.ttf')  format('truetype'), url('fonts/ClearSans.svg#ClearSans') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$clearsans: 'ClearSans-Light';
+$clearbold: 'ClearSans';
+
+$mainblue: #003082;
+$linkblue: #2d77bd;
+$blue: #005ca1;
+$buttonblue: #0079d3;
+
+$yellow: #ffc917;
+$yellowdarker: #e6b517;
+$yellowhover: #cfa317;
+
+$gray: #e6e6e9;
+$darkgray: #6a6a7a;
+
+$alert: #db0029;

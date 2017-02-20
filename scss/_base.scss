@@ -1,0 +1,47 @@
+body{
+  font-size: 16px;
+  // font-family: $clearsans, Tahoma, sans-serif;
+  font-family: 'Montserrat', Tahoma, sans-serif;
+  color: #060922;
+  background-color: $gray;
+  overflow: hidden;
+  &.drag{
+    cursor: move;
+  }
+}
+
+h1, h2{
+  color: $mainblue;
+}
+
+h1{
+  font-size: 1.8rem;
+  margin-bottom: 0.9rem;
+}
+h2{
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+p{
+  line-height: 1.1rem;
+  margin-bottom: 0.9rem;
+}
+
+input{
+  font-family: $clearsans, Tahoma, sans-serif;
+}
+
+.item{
+  padding: 2em;
+  background-color: #fff;
+  box-shadow: inset 0 -2px 0 0 rgba(7, 7, 33, 0.15);
+  box-sizing: border-box;
+  width: 60vw;
+  max-width: 40em;
+  position:absolute;
+}
+
+svg{
+  z-index: 1;
+}
